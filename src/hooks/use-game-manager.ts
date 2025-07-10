@@ -22,6 +22,8 @@ export const useGameManager = () => {
   const [error, setError] = useState<string | null>(null);
 
   const [gameState, setGameState] = useState<GameState>(GameState.Playing);
+  const [wins, setWins] = useState<number>(0);
+  const [losses, setLosses] = useState<number>(0);
 
   const handlePokemonNameSubmit = useCallback(
     (userInput: string) => {
@@ -32,7 +34,13 @@ export const useGameManager = () => {
         userInput
       );
 
-      setGameState(isValid ? GameState.Correct : GameState.Wrong);
+      if (isValid) {
+        setWins((prevWins) => prevWins + 1);
+        setGameState(GameState.Correct);
+      } else {
+        setLosses((prevLosses) => prevLosses + 1);
+        setGameState(GameState.Wrong);
+      }
     },
     [pokemon]
   );
@@ -55,6 +63,9 @@ export const useGameManager = () => {
     loadNewPokemon();
   }, [loadNewPokemon]);
 
+  const totalGames = wins + losses;
+  const effectiveness = totalGames === 0 ? 0 : (wins / totalGames) * 100;
+
   return {
     pokemon,
     isLoading,
@@ -62,5 +73,8 @@ export const useGameManager = () => {
     loadNewPokemon,
     handlePokemonNameSubmit,
     gameState,
+    wins,
+    losses,
+    effectiveness,
   };
 };

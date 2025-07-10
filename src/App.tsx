@@ -4,6 +4,7 @@ import PokemonDisplay from "./components/pokemon-display";
 import PokemonForm from "./components/pokemon-form";
 import PokemonResult from "./components/pokemon-result";
 import { GameState, useGameManager } from "./hooks/use-game-manager";
+import PokemonStats from "./components/pokemon-stats";
 
 const App = () => {
   const {
@@ -13,6 +14,9 @@ const App = () => {
     isLoading,
     gameState,
     handlePokemonNameSubmit,
+    wins,
+    losses,
+    effectiveness,
   } = useGameManager();
 
   const { width, height } = useWindowSize(); // para tamaño de la ventana
@@ -46,6 +50,7 @@ const App = () => {
             loadNewPokemon={loadNewPokemon}
             gameState={gameState}
           />
+          <PokemonStats wins={wins} losses={losses} effectiveness={effectiveness} />
         </div>
       </div>
     </div>

@@ -4,6 +4,14 @@
 
 En este proyecto, el objetivo es adivinar el nombre del Pokémon que aparece en pantalla, ¡al estilo del famoso segmento de la serie animada! Consumirás datos de la **PokeAPI** y aprenderás a manejar el estado de la aplicación de forma eficiente.
 
+## ✨ Características
+
+*   **Juego Interactivo:** Adivina el Pokémon y recibe retroalimentación instantánea.
+*   **Estadísticas del Juego:** Lleva un registro de tus victorias, derrotas y porcentaje de efectividad.
+*   **Integración con PokeAPI:** Obtiene datos de Pokémon en tiempo real.
+*   **Desarrollado con React y TypeScript:** Un excelente ejemplo de cómo construir aplicaciones modernas con estas tecnologías.
+*   **Estilizado con Bootstrap:** Interfaz de usuario limpia y responsiva.
+
 ## 🚀 Primeros Pasos
 
 Sigue estas instrucciones para tener una copia del proyecto funcionando en tu máquina local para desarrollo y pruebas.
@@ -60,7 +68,7 @@ Este proyecto es una excelente oportunidad para practicar y entender conceptos c
     *   **`useEffect`**: Hook para manejar efectos secundarios en tus componentes, como la carga de datos después de que el componente se monta o cuando ciertas dependencias cambian. En este proyecto, `useEffect` se usa para cargar un nuevo Pokémon al inicio o cuando se reinicia el juego.
     *   **`useCallback`**: Hook para memorizar funciones, evitando que se creen nuevas instancias en cada renderizado si sus dependencias no han cambiado. Esto es útil para optimizar el rendimiento, especialmente cuando pasas funciones como props a componentes hijos. Aquí se utiliza para `handlePokemonNameSubmit` y `loadNewPokemon`.
 *   **Creación de componentes reutilizables:** Estructurarás la aplicación en componentes más pequeños y manejables (`PokemonDisplay`, `PokemonForm`, `PokemonResult`, `Spinner`).
-*   **Lógica de juego:** Implementarás la lógica para verificar la respuesta del usuario y gestionar los diferentes estados del juego (jugando, correcto, incorrecto).
+*   **Lógica de juego y estadísticas:** Implementarás la lógica para verificar la respuesta del usuario, gestionar los diferentes estados del juego (jugando, correcto, incorrecto) y llevar un registro de las victorias, derrotas y efectividad.
 *   **TypeScript en React:** Utilizarás TypeScript para definir tipos de datos (como la interfaz `Pokemon`), lo que te ayudará a escribir código más robusto y con menos errores.
 *   **Procesamiento de formularios y manejo de eventos de entrada.**
 *   **Estilización con Bootstrap:** Integrarás Bootstrap para dar un diseño responsivo y atractivo a la aplicación.
