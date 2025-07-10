@@ -1,69 +1,21 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación de React que utiliza TypeScript y Vite como herramientas de desarrollo. El objetivo es crear una aplicación que consuma la API de Pokémon y el usuario tenga que adivinar qué Pokémon es.
 
-Currently, two official plugins are available:
+Revisar un demo del proyecto de React con TypeScript y Vite aquí: [Demo](https://quien-es-ese-pokemon-bluuweb.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ¿Qué aprenderás?
 
-## Expanding the ESLint configuration
+- Cómo configurar un proyecto de React con TypeScript y Vite.
+- Cómo consumir una API externa (API de Pokémon).
+- Cómo manejar el estado de la aplicación con React.
+- Cómo crear componentes reutilizables.
+- Cómo implementar lógica de adivinanza en la aplicación.
+- useEffect y useState para manejar efectos secundarios y estado.
+- useCallback para optimizar funciones.
+- Procesar formularios y manejar eventos de entrada.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Recursos
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- [https://youtube.com/bluuweb](https://youtube.com/bluuweb)
+- [https://bluuweb.dev/react-ts/03-practica-pokemon.html](https://bluuweb.dev/react-ts/03-practica-pokemon.html)
