@@ -1,6 +1,6 @@
 Esto es un proyecto para estudiantes que están aprendiendo React con Typescript.
-Utiliza Bootstrap 5 para este proyecto, trata de minimizar los estilos personalizados y utiliza las clases de Bootstrap siempre que sea posible.
 Los estudiantes trabajan con usestate, useeffect y usecallback, no agregues más hooks.
 Siempre prioriza que el código sea fácil de entender y siga las mejores prácticas de React, que sea fácil para un estudiante que está aprendiendo React y Typescript.
 Manten el proyecto como una SPA sin enrutamiento.
-Limita el uso de librerías externas, utiliza solo las que son necesarias para el proyecto.
+Toma la referencia de la imagen en la carpeta ui. esto para los estilos. si hay alguna sección que no se vea en las imágenes, ponte creativo.
+Sigue el siguiente diseño para la aplicación: La imagen tiene un fondo con un degradado de colores rojo y naranja en la parte derecha, mientras que en el centro y la izquierda predomina un estallido en tonos celestes y azul claro, simulando un destello o explosión. En el centro de la imagen se encuentra la silueta negra de un personaje con orejas puntiagudas y cola en zigzag (Pikachu), rodeada por el destello celeste. A la derecha, hay un signo de interrogación grande de color amarillo con borde azul. En la esquina inferior derecha aparece el logo de "Pokémon" en letras grandes, amarillas y con borde azul. El estilo general es caricaturesco y colorido, evocando la estética clásica de la serie animada de Pokémon y el popular juego "¿Quién es ese Pokémon?"

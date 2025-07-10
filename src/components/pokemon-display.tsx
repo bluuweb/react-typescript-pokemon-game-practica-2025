@@ -16,25 +16,21 @@ const PokemonDisplay = ({ pokemon, isLoading, gameState }: Props) => {
   console.log(name);
 
   return (
-    <div className="card">
-      <div className="card-header">
-        <h1 className="text-center">
+    <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+      <div className="p-4 bg-gray-200">
+        <h1 className="text-2xl font-bold text-center">
           {showAnswer ? name?.toUpperCase() : "¿Quién es ese Pokémon?"}
         </h1>
       </div>
-      <div className="card-body">
+      <div className="p-4 flex justify-center items-center min-h-[300px]">
         {isLoading ? (
           <Spinner />
         ) : (
           <img
             src={image}
-            alt=""
-            className="img-fluid mx-auto d-block"
-            style={{
-              maxHeight: "300px",
-              filter: showAnswer ? "none" : "brightness(0)",
-              transition: "filter 0.3s ease-in-out",
-            }}
+            alt="Pokémon"
+            className={`max-h-[300px] transition-all duration-500 ease-in-out ${showAnswer ? "filter-none opacity-100" : "filter brightness-0 opacity-100"}`}
+
           />
         )}
       </div>

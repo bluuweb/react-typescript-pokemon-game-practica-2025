@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+body {
+  background: linear-gradient(to bottom right, #ff4136, #ff851b);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Radial lines effect for the background, similar to the image */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.1) 1px,
+    transparent 1px
+  );
+  background-size: 10px 10px;
+  opacity: 0.2;
+  z-index: -1;
+}
